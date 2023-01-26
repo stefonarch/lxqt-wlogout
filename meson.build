@@ -1,5 +1,5 @@
 project(
-  'wlogout',
+  'lxqt-wlogout',
   'c',
   version: '1.1.1',
   license: 'MIT',
@@ -28,8 +28,8 @@ if scdoc.found()
   sh = find_program('sh', native: true)
   mandir = get_option('mandir')
   man_files = [
-            'man/wlogout.1.scd',
-            'man/wlogout.5.scd'
+            'man/lxqt-wlogout.1.scd',
+            'man/lxqt-wlogout.5.scd'
   ]
   foreach filename : man_files
     topic = filename.split('.')[-3].split('/')[-1]
@@ -51,17 +51,17 @@ endif
 
 if get_option('bash-completions')
   bashdir = datadir + '/bash-completion/completions'
-  install_data('completions/wlogout.bash', install_dir: bashdir)
+  install_data('completions/lxqt-wlogout.bash', install_dir: bashdir)
 endif
 
 if get_option('fish-completions')
   fishdir = datadir + '/fish/completions'
-  install_data('completions/wlogout.fish', install_dir: fishdir)
+  install_data('completions/lxqt-wlogout.fish', install_dir: fishdir)
 endif
 
 if get_option('zsh-completions')
   zshdir = datadir + '/zsh/site-functions'
-  install_data('completions/_wlogout', install_dir: zshdir)
+  install_data('completions/_lxqt-wlogout', install_dir: zshdir)
 endif
 
 gtk = dependency('gtk+-wayland-3.0')
@@ -71,8 +71,8 @@ if layershell.found()
     add_project_arguments('-DLAYERSHELL=1', language : 'c')
 endif
 
-install_subdir('assets', install_dir : datadir / 'wlogout')
-install_subdir('icons', install_dir : datadir / 'wlogout')
-install_data(['layout', 'style.css'], install_dir : sysconfdir / 'wlogout')
+install_subdir('assets', install_dir : datadir / 'lxqt-wlogout')
+install_subdir('icons', install_dir : datadir / 'lxqt-wlogout')
+install_data(['layout', 'style.css'], install_dir : sysconfdir / 'lxqt-wlogout')
 
-executable('wlogout', 'main.c', dependencies : [gtk, layershell], install : true)
+executable('lxqt-wlogout', 'main.c', dependencies : [gtk, layershell], install : true)

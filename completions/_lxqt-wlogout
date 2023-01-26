@@ -1,4 +1,4 @@
-#compdef wlogout
+#compdef lxqt-wlogout
 
 _arguments -s \
         '(-h --help)'{-h,--help}'[Show help message and stop]' \

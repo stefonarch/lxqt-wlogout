@@ -12,13 +12,13 @@
 }
 {
     "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
+    "action" : "lxqt-leave --logout && loginctl terminate-user $USER",
     "text" : "Logout",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "lxqt-leave --logout && systemctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -30,7 +30,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "lxqt-leave --logout && systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }

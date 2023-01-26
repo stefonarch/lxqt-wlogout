@@ -61,7 +61,7 @@ static gboolean process_args(int argc, char *argv[])
     };
 
     const char *help =
-        "Usage: wlogout [options] [command]\n"
+        "Usage: lxqt-wlogout [options] [command]\n"
         "\n"
         "   -h, --help                      Show help message and stop\n"
         "   -l, --layout <layout>           Specify a layout file\n"
@@ -169,13 +169,13 @@ static gboolean get_layout_path()
         config_path = g_strdup(buf);
     }
 
-    int n = snprintf(buf, default_size, "%s/wlogout/layout", config_path);
+    int n = snprintf(buf, default_size, "%s/lxqt/lxqt-wlogout/layout", config_path);
     if (n != 0)
     {
         free(buf);
         buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
         snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
-                "%s/wlogout/layout", config_path);
+                "%s/lxqt/lxqt-wlogout/layout", config_path);
     }
     free(config_path);
 
@@ -190,15 +190,15 @@ static gboolean get_layout_path()
         free(buf);
         return FALSE;
     }
-    else if (access("/etc/wlogout/layout", F_OK) != -1)
+    else if (access("/etc/lxqt-wlogout/layout", F_OK) != -1)
     {
-        layout_path = "/etc/wlogout/layout";
+        layout_path = "/etc/lxqt-wlogout/layout";
         free(buf);
         return FALSE;
     }
-    else if (access("/usr/local/etc/wlogout/layout", F_OK) != -1)
+    else if (access("/usr/local/etc/lxqt-wlogout/layout", F_OK) != -1)
     {
-        layout_path = "/usr/local/etc/wlogout/layout";
+        layout_path = "/usr/local/etc/lxqt-wlogout/layout";
         free(buf);
         return FALSE;
     }
@@ -233,13 +233,13 @@ static gboolean get_css_path()
         config_path = g_strdup(buf);
     }
 
-    int n = snprintf(buf, default_size, "%s/wlogout/style.css", config_path);
+    int n = snprintf(buf, default_size, "%s/lxqt/lxqt-wlogout/style.css", config_path);
     if (n != 0)
     {
         free(buf);
         buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
         snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
-                "%s/wlogout/style.css", config_path);
+                "%s/lxqt/lxqt-wlogout/style.css", config_path);
     }
     free(config_path);
 
@@ -254,15 +254,15 @@ static gboolean get_css_path()
         free(buf);
         return FALSE;
     }
-    else if (access("/etc/wlogout/style.css", F_OK) != -1)
+    else if (access("/etc/lxqt-wlogout/style.css", F_OK) != -1)
     {
-        css_path = "/etc/wlogout/style.css";
+        css_path = "/etc/lxqt-wlogout/style.css";
         free(buf);
         return FALSE;
     }
-    else if (access("/usr/local/etc/wlogout/style.css", F_OK) != -1)
+    else if (access("/usr/local/etc/lxqt-wlogout/style.css", F_OK) != -1)
     {
-        css_path = "/usr/local/etc/wlogout/style.css";
+        css_path = "/usr/local/etc/lxqt-wlogout/style.css";
         free(buf);
         return FALSE;
     }
@@ -290,7 +290,7 @@ static GtkWidget *get_window()
             gtk_layer_set_anchor (window, i, TRUE);
         }
         #else
-        printf("wlogout was not compiled with layer shell support\n");
+        printf("lxqt-wlogout was not compiled with layer shell support\n");
         gtk_window_fullscreen(GTK_WINDOW (window));
         #endif
     }
@@ -562,7 +562,7 @@ int main (int argc, char *argv[])
 {
     buttons = malloc(sizeof(button) * default_size);
 
-    g_set_prgname("wlogout");
+    g_set_prgname("lxqt-wlogout");
     gtk_init(&argc, &argv);
     if (process_args(argc, argv))
     {

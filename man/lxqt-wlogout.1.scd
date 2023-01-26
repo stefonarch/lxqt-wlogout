@@ -1,12 +1,12 @@
-wlogout(1)
+lxqt-wlogout(1)
 
 # NAME
 
-wlogout - A Wayland logout menu
+lxqt-wlogout - A Wayland logout menu for LXQt session
 
 # SYNOPSIS
 
-*wlogout* [options] [command]
+*lxqt-wlogout* [options] [command]
 
 # OPTIONS
 
@@ -51,26 +51,26 @@ wlogout - A Wayland logout menu
 
 # DESCRIPTION
 
-wlogout was created to replace oblogout with a native logout script for Wayland. It also seeks to be a faster alternative that does not rely on depracated technology such as python 2; while maintaining a small code footprint.
+The original wlogout was created to replace oblogout with a native logout script for Wayland. It also seeks to be a faster alternative that does not rely on deprecated technology such as python 2; while maintaining a small code footprint. lxqt-wlogout is a fork which will close a running lxqt-session first.
 
-You can run wlogout from any Wayland environment and it should just work.
+You can run lxqt-wlogout from any Wayland environment and it should just work.
 
 # CONFIGURATION
 
-Wlogout searches for a layout and style.css file in the following locations, in this order:
+lxqt-wlogout searches for a layout and style.css file in the following locations, in this order:
 
-. $XDG_CONFIG_HOME/wlogout/
-. /etc/wlogout/
-. /usr/local/etc/wlogout
+. $XDG_CONFIG_HOME/lxqt-wlogout/
+. /etc/lxqt-wlogout/
+. /usr/local/etc/lxqt-wlogout
 
 If unset, $XDG_CONFIG_HOME defaults to *~/.config/*.
 
-An error is raised when no layout file is found; However, the style.css file is optional. If you would like to customise either it is recommended that you copy the defaults from */etc/wlogout/* into  *~/.config* and make any changes there.
+An error is raised when no layout file is found; However, the style.css file is optional. If you would like to customise either it is recommended that you copy the defaults from */etc/lxqt-wlogout/* into  *~/.config* and make any changes there.
 
 # AUTHORS
 
-Maintained by Haden Collins <collinshaden@gmail.com> for more information about wlogout, see <https://github.com/ArtsyMacaw/wlogout>.
+wlogout is maintained by Haden Collins <collinshaden@gmail.com> for more information about wlogout, see <https://github.com/ArtsyMacaw/lxqt-wlogout>.
 
 # SEE ALSO
 
-*wlogout*(5)
+*lxqt-wlogout*(5)

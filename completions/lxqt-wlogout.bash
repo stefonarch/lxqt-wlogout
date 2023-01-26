@@ -1,4 +1,4 @@
-_wlogout()
+_lxqt-wlogout()
 {
     local cur prev
     _get_comp_words_by_ref cur prev
@@ -57,4 +57,4 @@ _wlogout()
         COMPREPLY+=($(compgen -c -- "$cur"))
     fi
 } &&
-complete -F _wlogout wlogout
+complete -F _lxqt-wlogout lxqt-wlogout
