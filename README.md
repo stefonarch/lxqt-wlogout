@@ -15,7 +15,7 @@ Custom buttons can be defined and edited in a layout file. The format is as foll
     "keybind" : "character to be bound"
 }
 ```
-By default after terminating LXQt-session it sends SIGTERM to `$wayland_compositor`.
+By default after terminating the LXQt-session it sends SIGTERM to `$wayland_compositor`.
 
 Check the default [layout file](layout) for examples and run `man 5 lxqt-wlogout` for documentation.
 ### Style
