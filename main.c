@@ -169,13 +169,13 @@ static gboolean get_layout_path()
         config_path = g_strdup(buf);
     }
 
-    int n = snprintf(buf, default_size, "%s/lxqt/lxqt-wlogout/layout", config_path);
+    int n = snprintf(buf, default_size, "%s/lxqt-wlogout/layout", config_path);
     if (n != 0)
     {
         free(buf);
         buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
         snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
-                "%s/lxqt/lxqt-wlogout/layout", config_path);
+                "%s/lxqt-wlogout/layout", config_path);
     }
     free(config_path);
 

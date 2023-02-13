@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "lxqt-leave --logout & sleep 2 && killall -e $wayland_compositor",
+    "action" : "lxqt-leave --logout & sleep 4 && killall -e $wayland_compositor",
     "text" : "Logout",
     "keybind" : "e"
 }
