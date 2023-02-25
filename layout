@@ -12,13 +12,13 @@
 }
 {
     "label" : "logout",
-    "action" : "lxqt-leave --logout & sleep 4 && killall -e $wayland_compositor",
+    "action" : "lxqt-leave --logout & sleep 5 && killall -e $WAYLAND_COMPOSITOR",
     "text" : "Logout",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
-    "action" : "lxqt-leave --logout && systemctl poweroff",
+    "action" : "lxqt-leave --logout &&  sleep 5 && systemctl poweroff",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -30,7 +30,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "lxqt-leave --logout && systemctl reboot",
+    "action" : "lxqt-leave --logout && sleep 5 && systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }

@@ -2,9 +2,9 @@
 ![Example](example.png)
 > lxqt-wlogout is a logout menu for [wayland](https://wayland.freedesktop.org/) environments which exits also a running LXQt-session. It is a simple fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) and can be installed alongside.
 ## Running
-Run `lxqt-lxqt-wlogout` to launch and press `Escape` to exit.
+Run `lxqt-wlogout` to launch and press `Escape` to exit.
 ## Config
-If you editing the default layout and css file it is recommended that you copy `/etc/lxqt-wlogout/layout` and `/etc/lxqt-wlogout/style.css` to `~/.config/lxqt/lxqt-wlogout/` or to `~/.config/lxqt-wlogout/` and change them there.
+If you editing the default layout and css file it is recommended that you copy `/etc/lxqt-wlogout/layout` and `/etc/lxqt-wlogout/style.css` to `~/.config/lxqt/lxqt-wlogout/` or to `~/.config/lxqt-wlogout/` and edit them there.
 ### Layout
 Custom buttons can be defined and edited in a layout file. The format is as follows:
 ```
@@ -15,7 +15,7 @@ Custom buttons can be defined and edited in a layout file. The format is as foll
     "keybind" : "character to be bound"
 }
 ```
-By default after terminating the LXQt-session it sends SIGTERM to `$wayland_compositor`.
+By default after terminating the LXQt-session it sends SIGTERM to `$WAYLAND_COMPOSITOR`.
 
 Check the default [layout file](layout) for examples and run `man 5 lxqt-wlogout` for documentation.
 ### Style
