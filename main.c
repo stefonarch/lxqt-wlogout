@@ -233,13 +233,13 @@ static gboolean get_css_path()
         config_path = g_strdup(buf);
     }
 
-    int n = snprintf(buf, default_size, "%s/lxqt/lxqt-wlogout/style.css", config_path);
+    int n = snprintf(buf, default_size, "%s/lxqt-wlogout/style.css", config_path);
     if (n != 0)
     {
         free(buf);
         buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
         snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
-                "%s/lxqt/lxqt-wlogout/style.css", config_path);
+                "%s/lxqt-wlogout/style.css", config_path);
     }
     free(config_path);
 
