@@ -1,7 +1,7 @@
 project(
   'lxqt-wlogout',
   'c',
-  version: '1.1.1',
+  version: '0.9.1',
   license: 'MIT',
   default_options:
   [
@@ -76,3 +76,5 @@ install_subdir('icons', install_dir : datadir / 'lxqt-wlogout')
 install_data(['layout', 'style.css'], install_dir : sysconfdir / 'lxqt-wlogout')
 
 executable('lxqt-wlogout', 'main.c', dependencies : [gtk, layershell], install : true)
+
+subdir('data')

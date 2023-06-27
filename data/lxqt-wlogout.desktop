@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=lxqt-wlogout
+GenericName=Logout from LXQt wayland sessions
+Comment=Logout from LXQt wayland sessions
+Exec=lxqt-wlogout
+Icon=system-shutdown
+Type=Application
+Categories=Settings;System;
