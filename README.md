@@ -1,6 +1,7 @@
 # lxqt-wlogout
 ![Example](example.png)
 > lxqt-wlogout is a logout menu for [wayland](https://wayland.freedesktop.org/) environments which exits also a running LXQt-session. It is a simple fork of [wlogout](https://github.com/ArtsyMacaw/wlogout) and can be installed alongside.
+> **Note** obsolete, logout can be handled differently by using `lxqt-session && <compositor-logout-command>`
 ## Running
 Run `lxqt-wlogout` to launch and press `Escape` to exit.
 ## Config
